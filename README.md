@@ -27,4 +27,8 @@ spimagine-jupyter-docker
 ```
 - Copy the corresponding part in the startup log: 8888/?token=77cac9853b36e2d71f0466c5801149fbe15f43665d90bb30
 - Open the notebook with the URL localhost:8888/?token=77cac9853b36e2d71f0466c5801149fbe15f43665d90bb30
+- If it is a remote X session with ssh access, the above URL can be accessed after establishing a ssh tunnel:
+```bash
+ssh <remote X session username>@<remote X session ip> -L 8888:localhost:8888 -N
+```
 
