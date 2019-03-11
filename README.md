@@ -1,6 +1,13 @@
 # spimagine-jupyter-docker
 spimagine Python volume rendering on CPU with Jupyter notebook
 
+# Requirements
+- SSE4.2 supporting Intel Core <> or Xeon Processor for running [Intel OpenCL™ Runtime 16.1.1 (CPU only)](https://software.intel.com/en-us/articles/whats-new-opencl-runtime-1611). See [Release Notes](https://software.intel.com/file/519819/download). Check for SSE4.2 with:
+```bash
+cat /proc/cpuinfo | grep -i sse4_2
+```
+The dockerfile inherits from [opencl_docker](https://github.com/pkienzle/opencl_docker), installs Jupyter notebook similar to [docker-python3-jupyter](https://github.com/nikhilmetrani/docker-python3-jupyter) and then installs [spimagine](https://github.com/maweigert/spimagine) with pip3 .
+
 # Example
 See [example/Example.ipynb](https://github.com/ivartz/spimagine-jupyter-docker/tree/master/example/Example.ipynb) that uses spimagine to visualize a 4D numpy array. The included keyframe editor is then used for rendering multiple images to a folder. Lastly, ffmpeg is used to create a .gif animation from the images, resulting in ![](example/rendering.gif "an animation of the dynamic contents of the 4D numpy array (t, z, y, x)").
 
