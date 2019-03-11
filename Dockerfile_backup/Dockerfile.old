@@ -1,0 +1,82 @@
+FROM pkienzle/opencl_docker
+# Inheriting from a docker environment where opencl 
+# is installed for Intel CPUs and GPUs, AMD GPUs and Nvidia GPUs.
+
+# The goal of this environment is to run spimagine
+# using x11 forwarding between docker environment
+# and host environment, based on CPU-only 
+# Intel OpenCL and standard CPU OpenGL .
+
+# The motivation was that the hardware with
+# most RAM available to the author was
+# a computer  with no supported
+# OpenCL CUDA NVidia GPU (too old).
+# A lot of ram is needed to load 4D numpy arrays into ram
+# for visualization and rendering with spimagine.
+# This the computer with outdated GPU would be best fit
+# for the task, given such a docker environment.
+
+# A future improvement would be to also
+# inherit with:
+#FROM jamesbrink/opengl:18.0.1
+# as a multistage docker build.
+# This docker environment has set up 
+# software OpenGL such as the 
+# Gallium llvmpipe driver
+# as well as a Xvfb virtual display
+# so that OpenGL applications can be run
+# with no physical display 
+# (or x11 forwarding as currently done), 
+# as well as running only on CPU,
+# not requiring any GPU installed.
+
+# Installing necessary libraries.
+
+# libgl1-mesa-glx installs Mesa OpenGL .
+# Since it is installed in a docker environment
+# with no GPU made available, it is forced to use
+# CPU, which is what we want.
+
+# qtbase5-dev installs non-python specific
+# qt libraries. I am not shure if this
+# is necessary.
+
+# libxcb-xinerama0-dev is the package that
+# makes x11 forwarding from the docker 
+# environment to standard linux x11 
+# enviornment, possible.
+
+# Installing pyopencl v. 2018.1.1 since this
+# is the latest version to not use 
+# the pybind11 python package
+# which seems to cause spimagine to
+# crash during some memory (de)allocation.
+
+RUN apt-get update -y && \
+    apt-get install -y libgl1-mesa-glx qtbase5-dev libxcb-xinerama0-dev python3-pip
+
+# Simple root password in case we want to customize the container
+RUN echo "root:root" | chpasswd
+
+# Adding user loek
+# add loek to the group video
+#RUN useradd -G video -ms /bin/bash loek
+
+# Creating home directory
+#RUN mkdir -p /workdir
+
+# Making home directory to work directory
+#WORKDIR /home/loek
+
+# Change from root user to user loek
+#USER loek
+
+# Install spimagine and additional dependencies 
+# as user loek
+RUN pip3 install spimagine scikit-tensor-py3 tifffile 
+
+# Install jupyter notebook
+RUN python3 -m pip install jupyter
+
+# A bash terminal will be launched when the built docker file is run
+CMD bash

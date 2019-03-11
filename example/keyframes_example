@@ -1,0 +1,192 @@
+{
+    "_countID": 5,
+    "items": {
+        "0": {
+            "interp_elasticity": 1.0,
+            "pos": 0.0,
+            "transformData": {
+                "alphaPow": 0,
+                "bounds": [
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                ],
+                "dataPos": 0,
+                "gamma": 1.0,
+                "isBox": 2,
+                "isIso": false,
+                "isSlice": false,
+                "maxVal": 909.0908813476562,
+                "minVal": 1e-06,
+                "quatRot": [
+                    0.5004596890082058,
+                    0.8657598394923444,
+                    0.0,
+                    0.0
+                ],
+                "sliceDim": 0,
+                "slicePos": 0,
+                "translate": [
+                    0,
+                    0,
+                    0
+                ],
+                "zoom": 1.0
+            }
+        },
+        "1": {
+            "interp_elasticity": 1.0,
+            "pos": 1.0,
+            "transformData": {
+                "alphaPow": 0,
+                "bounds": [
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                ],
+                "dataPos": 0,
+                "gamma": 1.0,
+                "isBox": 2,
+                "isIso": false,
+                "isSlice": false,
+                "maxVal": 909.0908813476562,
+                "minVal": 1e-06,
+                "quatRot": [
+                    0.5004596890082058,
+                    0.8657598394923444,
+                    0.0,
+                    0.0
+                ],
+                "sliceDim": 0,
+                "slicePos": 0,
+                "translate": [
+                    0,
+                    0,
+                    0
+                ],
+                "zoom": 1.0
+            }
+        },
+        "2": {
+            "interp_elasticity": 1.0,
+            "pos": 0.45342465753424654,
+            "transformData": {
+                "alphaPow": 0,
+                "bounds": [
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                ],
+                "dataPos": 99,
+                "gamma": 1.0,
+                "isBox": 2,
+                "isIso": false,
+                "isSlice": false,
+                "maxVal": 909.0908813476562,
+                "minVal": 1e-06,
+                "quatRot": [
+                    0.5004596890082058,
+                    0.8657598394923444,
+                    0.0,
+                    0.0
+                ],
+                "sliceDim": 0,
+                "slicePos": 0,
+                "translate": [
+                    0,
+                    0,
+                    0
+                ],
+                "zoom": 1.0
+            }
+        },
+        "3": {
+            "interp_elasticity": 1.0,
+            "pos": 0.22054794520547943,
+            "transformData": {
+                "alphaPow": 0,
+                "bounds": [
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                ],
+                "dataPos": 16,
+                "gamma": 1.0,
+                "isBox": 2,
+                "isIso": false,
+                "isSlice": false,
+                "maxVal": 909.0908813476562,
+                "minVal": 1e-06,
+                "quatRot": [
+                    0.4358715784789524,
+                    0.853712018333694,
+                    0.19517534698293662,
+                    -0.20760139866362617
+                ],
+                "sliceDim": 0,
+                "slicePos": 0,
+                "translate": [
+                    0,
+                    0,
+                    0
+                ],
+                "zoom": 1.0447286364230794
+            }
+        },
+        "4": {
+            "interp_elasticity": 1.0,
+            "pos": 0.7246575342465753,
+            "transformData": {
+                "alphaPow": 0,
+                "bounds": [
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                ],
+                "dataPos": 9,
+                "gamma": 1.0,
+                "isBox": 2,
+                "isIso": false,
+                "isSlice": false,
+                "maxVal": 909.0908813476562,
+                "minVal": 1e-06,
+                "quatRot": [
+                    0.42543297108664613,
+                    0.8580130068794465,
+                    -0.2046762490447235,
+                    0.20230694546880576
+                ],
+                "sliceDim": 0,
+                "slicePos": 0,
+                "translate": [
+                    0,
+                    0,
+                    0
+                ],
+                "zoom": 1.165499916332542
+            }
+        }
+    },
+    "posdict": {
+        "0.0": 0,
+        "0.22054794520547943": 3,
+        "0.45342465753424654": 2,
+        "0.7246575342465753": 4,
+        "1.0": 1
+    }
+}
