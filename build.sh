@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build --tag=spimagine_docker .
+docker build --tag=spimagine_jupyter_docker .
